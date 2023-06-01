@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluación intermedia</title>
-    <link rel="stylesheet" href="./CSS/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación intermedia</title>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <main class="main">
-        <h1 class="title">Dados y Apuestas</h1>
-        <p>Introduce aquí tu jugada:</p>
-        <form class="" action="">
-     
-            <label for="number" placeholder="¿Qué número apuestas del 1 al 6">
-                <input class="js_inputNumber" type="text" placeholder="Qué número apuestas del 1 al 6">
-                <select name="" id="">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
-            </label>
-            <label for="quantity">
-              <input
-                type="text"
-                id="cantidad"
-                name="quantity"
-                class="inputStyle js_quantity"
-                placeholder="¿Cuánto apuestas?"
-              />
-            </label>
-            <label for="button"
-              ><input class="js_button button-style" type="button" value="Jugar"
-            /></label>
-            <label for="saldo">
-                <h3>Vamos a jugar!</h3>
-              <input
-                type="text"
-                id="saldo"
-                name="saldo"
-                class="inputStyle js_result" placeholder="Saldo:"/>
-            </label>
-          </form>
-    <script src="./JS/main.js"></script>
+  <main class="main">
+   <h1>Dados y apuestas</h1>
+   <h3>Introduce aquí tu jugada:</h3>
+   <div class="container">
+   <select class="">
+    <option value="">Qué número apuestas del 1 al 6</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+  <input class="js_quantity" type="number" placeholder="¿Cuánto apuestas?">
+  <button class="button js_button">Jugar</button>
+  </div>
+  <h2>¡Vamos a jugar!</h2>
+  <p>Saldo: 50</p>
+  </main>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
