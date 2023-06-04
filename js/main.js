@@ -1,36 +1,56 @@
 'use strict';
 
+// declaro variables
+const userNumberSelect = document.querySelector('.js_usernumber'); 
+const quantity = document.querySelector('.js_quantity'); 
 const button = document.querySelector('.js_button');
-const quantity = document.querySelector('.js_quantity');
-const userNumberSelect = document.querySelector('.js_usernumber');
 const result = document.querySelector('.js_result');
+const balance = document.querySelector('.js_balance');
 
 
-let amount = 50; 
+
+
 
 function getRandomNumber(max) { 
   return Math.ceil(Math.random() * max);
 }
 
-
-
-const userNumber = userNumberSelect.Value;
-console.log(userNumber);
+const randomNumberResult = getRandomNumber();
 
 
 
-
-
-
-//FUNCIONES
+//Funciones
 
 const handleClickButton = (event) => {
-    event.preventDefault()
+    event.preventDefault();
+    const randomNumberResult = getRandomNumber(6);
+    console.log('randomNumber:', randomNumberResult);
+
+
+
+
+
+// si la usuaria acierta el número, gana el doble
+if (userNumberSelect === randomNumberResult){ 
+  const newScoreWin = ParseInt(quantity.value) * 2; // gana el doble de lo que ha apostado
+  result.innerHTML = "Has ganado el doble de lo apostado";
+  balance.innerHTML = newScoreWin;
+  console.log('new result:', newScoreWin);
+  
+  
+} else {
+  //Cuando la jugadora introduzca un número que no coincida con el número aleatorio, pierde todo lo apostado
+  const newScoreLost = 50 - (quantity.value);
+  result.innerHTML = "Has perdido lo apostado";
+  balance.innerHTML = newScoreLost; 
+  console.log('newScoreLost:', newScoreLost);
+}
+
 }
 
 
 
-//EVENTO
+//Evento
 button.addEventListener('click', handleClickButton);
 
 
